@@ -87,7 +87,7 @@ public class UIManager : MonoBehaviour
         }
 
     }
-    public void OnSizeSelected(int i)
+    public void OnSizeSelected(int i) //Receives the size selected
     {
         changedSize = true;
         StressBallManager.OnSizeChanged(i);

@@ -18,7 +18,7 @@ public class StressBallSO : ScriptableObject
     public Color[] possibleColors;
     public Color selectedColor;
 
-    private void OnValidate()
+    private void OnValidate() //Sets the correct values for each ball size type 
     {
         switch (sizeType)
         {
@@ -38,7 +38,7 @@ public class StressBallSO : ScriptableObject
         if(!isBlack)
             selectedColor = possibleColors[0];
     }
-    public void ChangeColor(Color color)
+    public void ChangeColor(Color color) //Changes the color of the ball
     {
         selectedColor = color;
         if (color.Equals(Color.black) && sizeType.Equals(SizeType.LARGE))
@@ -52,11 +52,11 @@ public class StressBallSO : ScriptableObject
             return sizeIfBlack;
         else
             return currentSize;
-    }
+    } //Get the correct size of the ball
 }
 
 
 public enum SizeType
 {
     SMALL, MEDIUM, LARGE
-}
+} //SizeType Enum

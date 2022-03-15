@@ -15,7 +15,7 @@ public class StressBallManager : MonoBehaviour
     private MeshRenderer meshRendererStressBall; //Stressball Mesh Renderer
 
 
-    public StressBallSO GetCurrentStressBall()
+    public StressBallSO GetCurrentStressBall() //Returns the selected stressball
     {
         return SelectedStressBall;
     }
@@ -31,12 +31,12 @@ public class StressBallManager : MonoBehaviour
     {
         UpdateStressBallSize();
     }
-    public void OnSizeChanged(int i)
+    public void OnSizeChanged(int i) //Handles the size of the ball being changed
     {
         SelectedStressBall = StressBallTypes[i];
         meshRendererStressBall.material.color = SelectedStressBall.selectedColor;
     }
-    public void OnColorSelected(int index)
+    public void OnColorSelected(int index) //Handles the color of the ball being changed
     {
         Color selectedColor = SelectedStressBall.possibleColors[index];
 
